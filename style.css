@@ -99,8 +99,6 @@ and for positioning
   position absolute to make it stick, to the right and bottom of the screen
   margin to distance ever so slightly the headers from the surrounding border
   width to encompass 80% of the body surrounding it
-
-  transition to account for the change in size for smaller screens
 */
 .content {
   font-family: 'Nothing You Could Do', cursive;
@@ -115,8 +113,6 @@ and for positioning
   bottom: 20px;
   margin: 20px;
   width: 80%;
-
-  transition: all 0.4s ease-out;
 }
 
 /*

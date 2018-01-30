@@ -11,7 +11,9 @@ Following @ [Freecodecamp](Freecodecamp.org) challenges, specifically the first 
 
 ## Design 
 
-Following a first draft for the project (see Resources/Random Quote Machine Mockup.png for a reference) the single page application is divided into two main sections.
+![Random Quote Machine Mockup](Resources/Random Quote Machine Mockup.png)
+
+Following a first draft for the project the single page application is divided into two main sections.
 
 ### 1. The Header
 
