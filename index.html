@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Random Quote Machine
+using
+  -index.html
+  -style.css
+  -script.js
+
+external libraries
+  - font awesome icons
+  - jquery
+  - forismatic API
+-->
+<html>
+<!--
+in the head
+  - title
+  - description
+  - reference to custom styling
+  - reference to font awesome library
+  - reference to custom icon
+-->
+<head>
+  <title>Random Quote Machine</title>
+  <meta name="description" content="Single page application to fulfill the first project in the FreeCodeCamp section of 'Intermediate Front-end Development Projects'. A random quote machine to provide insightful quotes and allow to share them on twitter.">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Page Tab Icon, go back in the folder structure with two dots ../-->
+  <link rel="icon" href="Resources/Tab Icon.png">
+</head>
+
+<body>
+  <!--
+  in the body
+    - header; with
+        - svg used as background
+        - text on top of the svg and separated in three spans to select each one in jQuery
+
+    - content; with
+        - header for the text of a quote
+        - header for the author of said quote (both included through jquery)
+
+    - script call; for
+        - jquery
+        - custom js script
+  -->
+
+  <div class="header">
+    <!-- svg syntax in order to create a wavy background for the header itself , made with Inkscape (http://www.inkscape.org/) -->
+    <svg>
+      <path
+         d="M 0.00209627,100 0,0 h 590.39224 590.39226 l 5.1721,2.663787 c 9.5762,4.932036 14.0025,9.157384 14.043,13.40547 0.023,2.405049 -1.056,3.933589 -3.8954,5.519233 -5.9652,3.331082 -17.6378,3.772522 -28.1982,1.066406 -2.1069,-0.539902 -7.0976,-1.818694 -11.0904,-2.841758 -16.1518,-4.138572 -43.1643,-8.793369 -64.7417,-11.156343 -23.9333,-2.620967 -43.5531,-2.792057 -53.0368,-0.462495 -13.273,3.260389 -12.4275,10.492672 2.5967,22.21279 10.1241,7.897616 13.8719,13.601065 12.0873,18.394355 -2.8896,7.761368 -17.9874,12.688473 -45.2183,14.756815 -9.50215,0.721745 -38.13226,0.716367 -50.05504,-0.0094 -34.62266,-2.107574 -66.7352,-6.711029 -93.15756,-13.354485 -3.49693,-0.879254 -10.48786,-2.798258 -15.53535,-4.264452 -23.6459,-6.868673 -44.55181,-11.159672 -62.70587,-12.87056 -8.80464,-0.829777 -23.03114,-0.897031 -29.05067,-0.137333 -24.94069,3.147651 -32.08407,14.935078 -20.10079,33.16869 1.35325,2.059036 4.2775,5.946725 6.49846,8.639309 4.53028,5.492361 6.25039,8.523641 6.91574,12.187271 1.3779,7.58694 -3.699,13.67256 -15.03364,18.02063 -20.28358,7.78097 -57.61728,9.69255 -101.67313,5.20594 -23.05122,-2.3475 -45.25662,-6.19851 -67.42716,-11.69364 -12.89419,-3.19591 -21.30257,-5.67938 -36.18669,-10.68794 -11.92487,-4.01278 -20.68972,-6.47492 -31.10214,-8.73694 -19.04967,-4.13841 -38.10368,-6.602612 -60.14648,-7.778575 -11.94454,-0.637232 -34.0317,-0.41856 -45.33287,0.448812 -36.63184,2.811519 -61.1256,10.648863 -62.19224,19.899863 -0.55589,4.82117 4.17607,9.10325 15.53742,14.0602 9.45412,4.12484 16.84706,9.0372 22.80133,15.15069 13.26456,13.61927 15.68107,29.62252 6.1452,40.69637 -8.47706,9.84429 -26.15772,14.69024 -48.61507,13.32456 -23.87403,-1.45184 -50.52614,-8.41358 -86.0366,-22.47345 -15.70562,-6.21842 -24.96956,-9.26499 -38.47236,-12.65213 -19.46711,-4.88327 -36.09759,-6.97839 -55.26879,-6.96282 -25.49725,0.0207 -48.20361,4.29886 -72.022712,13.56991 -6.64603,2.58682 -20.099605,9.14266 -27.09755,13.20446 -16.633416,9.65448 -33.99477,23.53437 -45.502493,36.37788 L 0.00419252,200 Z"/>
+    </svg>
+    <!-- spans with the title and call to icons buttons alike
+    1. get quote through the **random** handle
+    2. share quote on twitter through the **quote** handle
+
+    each span incorporates an icon to hint at the underlying action
+    icon provided by the font awesome library referenced in the head
+    -->
+      <span id="getQuote"><i class="fa fa-random" aria-hidden="true"></i> Random </span>
+      <span id="shareQuote"><i class="fa fa-twitter" aria-hidden="true"></i> Quote </span>
+      <span id="nothingSorry"><i class="fa fa-android" aria-hidden="true"></i> Machine</span>
+  </div>
+
+  <!-- content with empty header elements, to be filled through jQuery-->
+  <div class="content">
+    <h3></h3>
+    <h4></h4>
+  </div>
+
+  <!-- reference to jquery and custom script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

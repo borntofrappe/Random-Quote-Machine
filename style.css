@@ -1,0 +1,137 @@
+/*
+  import fonts from google
+  - one for the header, bad script
+  - one for the content, nothing you could do
+  I find them somehow ironic
+*/
+@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Bad+Script');
+/*
+to everything add box-sizing border-box to consider border and padding in the computation of .height() in jquery
+*/
+* {
+  box-sizing: border-box;
+}
+
+/*
+for the body
+  width and height to 100%
+  margin and padding to 0
+*/
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+/*
+for the svg in the header
+  fill to a default color value (which can be changed in jquery)
+  width to 100% (with respect to the width of the body)
+  min height to 400px to consider the svg from top to bottom, without crop
+  transition for the color change to be applied in jquery
+*/
+.header svg {
+  fill: #8800AA;
+  width: 100%;
+  min-height: 400px;
+  transition: all 0.4s ease;
+}
+/*
+for each span in the header
+  font to the decided and imported font
+  position relative to allow its movement with respect to where it should be by default (and to move the icons freely in relation to it)
+  top to minus 400px to overlay on top of the 400px height svg background
+  margin left to distance the text from the border of the page
+  font size and weight to make the text more legible
+  cursor pointer to make it clearly clickable
+  z-index to make the span stay on top of the content (there's a small chance that a quote might be too long and when resizing the window, this one will block the click option)
+  transition to account for the change in size for smaller screens
+*/
+.header span {
+  font-family: 'Bad Script', cursive;
+  position: relative;
+  top: -400px;
+  margin-left: 1rem;
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.4s ease-out;
+}
+/*
+for the last span
+  set cursor to auto as the title currently has no action connected to it
+*/
+.header span:last-child {
+  cursor: auto;
+}
+/*
+for each icon nested in the span
+  position absolute to move the icon freely in relation to the parent span (which has position relative)
+  bottom to distance the icons from the spans themselves
+  transition for the hovering state, and change in screen size
+*/
+.header span i {
+  position: absolute;
+  bottom: -25px;
+  transition: all 0.4s ease-out;
+}
+/*
+upon hovering a span,
+  affect the icon
+    adding text shadow of a transparent white to the top left
+*/
+.header span:hover i {
+  text-shadow: -8px -12px 1px rgba(255,255,255,0.7);
+}
+
+/*
+for the content (containing the headers for quote text and author)
+  font family to the chosen and imported font
+  font size to increase the default
+  color to a default value (which can be changed and will be changed with jquery)
+  text shadow (which will be likewise changed in jquery)
+  text transform to capitalize each word
+  text align to right to move it in opposition to the header container above
+
+and for positioning
+  position absolute to make it stick, to the right and bottom of the screen
+  margin to distance ever so slightly the headers from the surrounding border
+  width to encompass 80% of the body surrounding it
+
+  transition to account for the change in size for smaller screens
+*/
+.content {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 2rem;
+  color: #8800AA;
+  text-shadow: 1px 0 #8800AA;
+  text-transform: capitalize;
+  text-align: right;
+
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  margin: 20px;
+  width: 80%;
+
+  transition: all 0.4s ease-out;
+}
+
+/*
+for smaller screens
+  reduce font size of the span
+  reduce font size of the content
+
+this begins to account for quotes which are too long and occupy too much space on smaller devices
+another safety check is made in the js file by allowing only quotes shorter than a specified amount
+*/
+@media only screen and (max-width: 700px) {
+    .header span {
+      font-size: 1.5rem;
+    }
+    .content {
+      font-size: 1.5rem;
+    }
+  }
