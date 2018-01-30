@@ -1,4 +1,4 @@
-# [Random-Quote-Machine](https://codepen.io/borntofrappe/full/VQYmpJ/)
+# Random-Quote-Machine
 
 Build a single page application to 
 
