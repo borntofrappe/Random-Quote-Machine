@@ -1,4 +1,4 @@
-# Random-Quote-Machine
+# [Random-Quote-Machine](https://codepen.io/borntofrappe/full/VQYmpJ/)
 
 Build a single page application to 
 
@@ -8,9 +8,7 @@ Build a single page application to
 This following a [Freecodecamp](Freecodecamp.org) challenge, specifically the first project in the line of 
 'Intermediate Front End Development Projects'.
 
-Feel free to download for your own amusement. 
-
-// TODO: add reference to a working pen 
+Feel free to download for your own amusement. Or check it out on [codepen](https://codepen.io/borntofrappe/full/VQYmpJ/) if you so wish. 
 
 ## Design 
 
