@@ -5,9 +5,12 @@ Build a single page application to
 1. get a random quote
 2. possibly share said quote on twitter
 
-Following @ [Freecodecamp](Freecodecamp.org) challenges, specifically the first project in the line of 
+This following a [Freecodecamp](Freecodecamp.org) challenge, specifically the first project in the line of 
 'Intermediate Front End Development Projects'.
 
+Feel free to download for your own amusement. 
+
+// TODO: add reference to a working pen 
 
 ## Design 
 
